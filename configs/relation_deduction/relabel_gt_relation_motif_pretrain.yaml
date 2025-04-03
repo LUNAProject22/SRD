@@ -1,0 +1,42 @@
+IMG_DIR: "datasets/vg/VG_100K"
+ROIDB_FILE: "datasets/vg/VG-SGG-with-attri.h5"
+DICT_FILE: "datasets/vg/VG-SGG-dicts-with-attri.json"
+IMAGE_FILE: "datasets/vg/image_data.json"
+NEW_RELATION:
+  ENABLE: True
+  # other rules
+  USE_KG: True  #False
+  FILTER_FREQ_REL: False
+  NEW_REL_FILTER: "pretrain_internal" # ovlp/nn/none/iou/pretrain/pretrain_internal
+  RANK_PAIRS: False
+  N_SPO_RULE: True # number of specific triple should > 0 in trainset
+  SAMPLE_REL_FROM_PROB: True
+  # internal transfer
+  COMB_INTERNAL_TRANS: False
+  INTERNAL_FILE: "datasets/vg/intrans_rel.pk"
+  # KG config
+  KG_DATA_ROOT: "datasets/kg/triple-prior"
+  USE_CONTEXT: True
+  USE_DISTILLATION: True
+  # with context
+  KMEANS_MODEL: "datasets/kg/context-based/kmeans_25.pkl"
+  KMEANS_PRED_FILE: "datasets/kg/context-based/kmeans_25_prediction_combined_img2cluster.pkl"
+  CLUSTER_TO_KNOWLEDGE: "triple_prob-CD-tfidf-no_new_rels-all_preds.pkl"
+  # without context
+  PAIR_SCORE: "subject2pair_prob.json"
+  TOP_REL_OF_PAIR: "subj_obj_to_top_pred.json"
+  NO_CONTEXT_TRIPLE_PROB: "triple_prob.pkl"
+  # path and names
+  # REL_CACHE_PREFIX: "motif_pretrain_tfidf_N35"    # "motif_pretrain_N"
+  REL_CACHE_PREFIX: "motif-i1_tfidf_N35_plusplus"
+  VIS_OUT_DIR: ""
+  OUTPUT_DIR: 'output/relabel-motif-i1/'
+USE_LOGITS:
+  ENABLE: True
+  STAGE: "deduction"     # "get-logits", "deduction"
+  COMB_METHOD: "mult"    # "mult", "sum"
+  SPECIFIED_DATA_FILE: 'datasets/vg/vg_sup_data.pk'
+  # DATA_WITH_LOGITS: 'datasets/vg/sup_data_with_prediction.pk'
+  # LOGITS_COMB_PRIOR: "output/motif/sup_data_with_pred_tfidf_N35_CD.pk"
+  DATA_WITH_LOGITS: "output/relabel-motif-i1/sup_data_with_motif_prediction.pk"
+  LOGITS_COMB_PRIOR: "output/relabel-motif-i1/sup_data_with_motif_pred_comb_tfidf_CD_allP.pk"

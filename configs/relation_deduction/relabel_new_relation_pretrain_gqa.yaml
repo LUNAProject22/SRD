@@ -1,0 +1,40 @@
+IMG_DIR: "datasets/gqa/images"
+DICT_FILE: "datasets/gqa/GQA_200_ID_Info.json"
+TRAIN_FILE: "datasets/gqa/GQA_200_Train.json"
+TEST_FILE: "datasets/gqa/GQA_200_Test.json"
+NEW_RELATION:
+  ENABLE: True
+  # other rules
+  USE_KG: True
+  FILTER_FREQ_REL: True
+  NEW_REL_FILTER: "pretrain" # ovlp/nn/none/iou/pretrain
+  RANK_PAIRS: False
+  N_SPO_RULE: True # number of specific triple should > 0 in trainset
+  TOP_K_FREQ: 0
+  SAMPLE_REL_FROM_PROB: True
+  # internal transfer
+  COMB_INTERNAL_TRANS: False
+  INTERNAL_FILE: ""
+  # KG config
+  KG_DATA_ROOT: "datasets/kg/triple-prior-gqa"
+  USE_CONTEXT: True
+  USE_DISTILLATION: True
+  # with context
+  KMEANS_MODEL: "datasets/kg/triple-prior-gqa/kmeans_20.pkl"
+  KMEANS_PRED_FILE: "datasets/kg/triple-prior-gqa/kmeans_20_prediction_img2cluster.pkl"
+  CLUSTER_TO_KNOWLEDGE: ""
+  # without context
+  PAIR_SCORE: "subject2pair_prob.json"
+  TOP_REL_OF_PAIR: "subj_obj_to_top_pred.json"
+  NO_CONTEXT_TRIPLE_PROB: ""
+  # path and names
+  REL_CACHE_PREFIX: ""
+  VIS_OUT_DIR: ""
+  OUTPUT_DIR: ""
+USE_LOGITS:
+  ENABLE: True
+  STAGE: "deduction"     # "get-logits", "deduction"
+  COMB_METHOD: "mult"    # "mult"
+  SPECIFIED_DATA_FILE: 'datasets/gqa/gqa_sup_data.pk'
+  DATA_WITH_LOGITS: ""
+  LOGITS_COMB_PRIOR: ""
