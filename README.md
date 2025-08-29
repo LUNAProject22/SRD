@@ -12,7 +12,10 @@ Check [INSTALL.md](INSTALL.md) for installation instructions.
 
 ## Dataset
 
-Check [DATASET.md](DATASET.md) for instructions of dataset preprocessing.
+Check [DATASET.md](DATASET.md) for instructions of dataset preprocessing. 
+
+## Statistical Relation Distillation (SRD)
+For computing SRD, check out [this instruction](srd/SRD_README.md).
 
 
 ## Pretrained Models

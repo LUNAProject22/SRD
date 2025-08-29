@@ -1,5 +1,5 @@
-## Preparation
-- Extract files in srd_data
+## Step 0. Preparation
+- Unzip ```srd_data.zip```
 
 ## Step 1. Run K-Means (for Context-based SRD)
 **OUTPUT**:
