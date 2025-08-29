@@ -1,4 +1,4 @@
-# Effective Scene Graph Generation by Statistical Relation Distillation
+# Compute No-Context/Context-based Prior Probability for Knowledge Deduction
 
 ## Preparation
 - Unzip ```srd_data.zip```
