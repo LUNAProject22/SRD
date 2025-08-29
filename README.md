@@ -15,8 +15,7 @@ Check [INSTALL.md](INSTALL.md) for installation instructions.
 Check [DATASET.md](DATASET.md) for instructions of dataset preprocessing. 
 
 ## Statistical Relation Distillation (SRD)
-For computing SRD, check out [this instruction](srd/SRD_README.md).
-
+For computing SRD, check out [this instruction](srd/)
 
 ## Pretrained Models
 You can download the [pretrained Faster R-CNN](https://onedrive.live.com/embed?cid=22376FFAD72C4B64&resid=22376FFAD72C4B64%21779870&authkey=AH5CPVb9g5E67iQ) we used in the paper.
