@@ -1,4 +1,6 @@
-## Step 0. Preparation
+# Effective Scene Graph Generation by Statistical Relation Distillation
+
+## Preparation
 - Unzip ```srd_data.zip```
 
 ## Step 1. Run K-Means (for Context-based SRD)
