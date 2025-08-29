@@ -1,4 +1,4 @@
-# Compute No-Context/Context-based Prior Probability for Knowledge Deduction
+# Compute No-Context/Context-based Prior Probability for Relation Deduction
 
 ## Preparation
 - Unzip ```srd_data.zip```
